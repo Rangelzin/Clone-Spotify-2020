@@ -377,6 +377,18 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --valor9xl: 9rem;
+    --valor14: 3.5rem;
+    --valor125px: 125px;
+    --porcent175: 175%;
+    --porcent195: 195%;
+    --color-hoverspt: #3DD973;
+    --color-purple-main: #3449BF;
+    --color-green-main: #2EF24B;
+    --spotify-theme: url('/img/bursts.svg');
+    --spotify-theme-mobile: url('/img/bursts-mobile.svg');
+    --banner: 46% 4%;
+    --banner-mobile: top 25% center;
   }
 }
 @layer base {
@@ -797,8 +809,20 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
+  }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
+  .w-31 {
+    width: calc(var(--spacing) * 31);
+  }
+  .w-full {
+    width: 100%;
   }
   .w-screen {
     width: 100vw;
@@ -814,6 +838,9 @@
   }
   .min-w-screen {
     min-width: 100vw;
+  }
+  .flex-1 {
+    flex: 1;
   }
   .flex-auto {
     flex: auto;
@@ -1425,6 +1452,9 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
+  .bg-black {
+    background-color: var(--color-black);
+  }
   .bg-red-500 {
     background-color: var(--color-red-500);
   }
@@ -1433,9 +1463,6 @@
   }
   .bg-red-500\/\[50\%\] {
     background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
-  }
-  .bg-red-900 {
-    background-color: var(--color-red-900);
   }
   .-bg-conic {
     --tw-gradient-position: in oklab,;
@@ -1606,6 +1633,12 @@
   .p-1 {
     padding: calc(var(--spacing) * 1);
   }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
   .text-center {
     text-align: center;
   }
@@ -1648,13 +1681,17 @@
   .align-top {
     vertical-align: top;
   }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
   .leading-none {
     --tw-leading: 1;
     line-height: 1;
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
   }
   .text-balance {
     text-wrap: balance;
@@ -1728,6 +1765,9 @@
   }
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
+  }
+  .text-white {
+    color: var(--color-white);
   }
   .capitalize {
     text-transform: capitalize;
@@ -2172,6 +2212,46 @@
   .transform-view {
     transform-box: view-box;
   }
+  .md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
+    }
+  }
+  .md\:hidden {
+    @media (width >= 48rem) {
+      display: none;
+    }
+  }
+  .md\:w-\(--\) {
+    @media (width >= 48rem) {
+      width: var(--);
+    }
+  }
+  .md\:w-\(--2\) {
+    @media (width >= 48rem) {
+      width: var(--2);
+    }
+  }
+  .md\:w-\(--valor\) {
+    @media (width >= 48rem) {
+      width: var(--valor);
+    }
+  }
+  .md\:w-\(--valor125px\) {
+    @media (width >= 48rem) {
+      width: var(--valor125px);
+    }
+  }
+  .md\:w-31 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 31);
+    }
+  }
+  .md\:px-20 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 20);
+    }
+  }
 }
 @keyframes spin {
   to {
@@ -2297,6 +2377,10 @@
   initial-value: 0;
 }
 @property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
