@@ -2,7 +2,7 @@
 Este repositório contém um clone visual do Spotify desenvolvido com HTML e principalmente TailwindCSS. Foi criado para praticar habilidades de front-end, recriando o design moderno e intuitivo da plataforma de streaming de música de 2020.
 
 # 🚀 Demonstração
-Você pode visualizar o projeto diretamente <a href="https://rangelzin.github.io/Clone-Spotify-2020/src/indexSPOTIFY.html">Aqui</a>.
+Você pode visualizar o projeto diretamente <a target="_blank" href="https://rangelzin.github.io/Clone-Spotify-2020/src/indexSPOTIFY.html">Aqui</a>.
 
 # 🛠️ Tecnologias Utilizadas
  - HTML5: Estrutura semântica e organizada.
